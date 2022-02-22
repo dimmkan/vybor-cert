@@ -18,20 +18,20 @@ import ormconfig from "./ormconfig";
     ScheduleModule.forRoot(),
     MailerModule.forRoot({
       transport: {
-        host:'exch01.vybor.local',
+        host:'test',
         port:'587',
         secure: false,
         requireTLS: true,
         auth: {
-          user:'vybor\\send',
-          pass:'arf7KOoGkj'
+          user:'test',
+          pass:'test'
         },
         tls: {
           rejectUnauthorized: false,
         },
       },
       defaults: {
-        from: 'Управление сертификатами <send@vyborstroi.ru>',
+        from: 'Управление сертификатами <send@test.ru>',
       },
     }),
     TypeOrmModule.forRoot(ormconfig)
